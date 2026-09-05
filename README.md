@@ -30,7 +30,7 @@ E-commerce merchants lose significant revenue every day due to friction points a
 
 Instead of displaying generic error messages, RazorResolve AI acts as an intelligent intermediary between the customer, merchant, and payment gateway to safely recover lost revenue.
 
-![Dashboard Overview](docs/screenshots/overview.png)
+![Dashboard Overview](docs/screenshots/01_overview.png)
 
 ---
 
@@ -65,11 +65,11 @@ Audit Trail
 - **AI Product Discovery**: Natural language query understanding and contextual product discovery.
 - **Semantic Product Search**: Relevance scoring algorithm mapping user search intent (e.g. "earphones", "laptops under ₹70,000") to product catalog items.
 
-![AI Shopping Assistant](docs/screenshots/ai_shopping.png)
+![AI Shopping Assistant](docs/screenshots/02_ai_shopping.png)
 
 - **Dynamic Cart Management**: Slide-over cart drawer with inline quantity increment/decrement controls, item removal, dynamic subtotal calculations, and seamless checkout sync.
 
-![Shopping Cart Drawer](docs/screenshots/cart_drawer.png)
+![Shopping Cart Drawer](docs/screenshots/03_cart_drawer.png)
 - **Agentic Checkout**: Interactive simulation environment visualizing real-time payment failure investigation and autonomous recovery across 6 scenario workflows.
 - **Payment Failure Investigation**: Automated diagnostic engine analyzing status codes, error patterns, and failure logs to determine the exact root cause.
 - **Gateway Failure Recovery**: Automatic alternate route re-execution for temporary 503 gateway outages.
@@ -126,7 +126,7 @@ When a customer attempts a transaction that triggers a duplicate charge pattern 
 
 During a **503 Gateway Failure** simulation, the system executes the complete 7-stage decision lifecycle visually in real-time:
 
-![Live Agentic Checkout Simulation](docs/screenshots/live_checkout.png)
+![Live Agentic Checkout Simulation](docs/screenshots/09_live_checkout.png)
 
 ```text
 Gateway Failure
@@ -146,7 +146,7 @@ ACT           (Executes recovery transaction via secondary gateway route)
 VERIFY        (Confirms payment capture & synchronizes order state)
 ```
 
-![Autonomous Recovery Timeline](docs/screenshots/agent_timeline.png)
+![Autonomous Recovery Timeline](docs/screenshots/10_agent_timeline.png)
 
 This 7-stage lifecycle represents the core demonstration of autonomous agentic governance in RazorResolve AI.
 
@@ -307,19 +307,43 @@ For a complete 5-minute project demonstration, follow this step-by-step sequence
 ## Screenshots
 
 ### 1. Dashboard Overview
-![Dashboard Overview](docs/screenshots/overview.png)
+![Dashboard Overview](docs/screenshots/01_overview.png)
 
 ### 2. AI Shopping Assistant
-![AI Shopping Assistant](docs/screenshots/ai_shopping.png)
+![AI Shopping Assistant](docs/screenshots/02_ai_shopping.png)
 
 ### 3. Shopping Cart Drawer
-![Shopping Cart Drawer](docs/screenshots/cart_drawer.png)
+![Shopping Cart Drawer](docs/screenshots/03_cart_drawer.png)
 
-### 4. Live Agentic Checkout Simulation
-![Live Agentic Checkout Simulation](docs/screenshots/live_checkout.png)
+### 4. Product Intelligence
+![Product Intelligence](docs/screenshots/04_product_intelligence.png)
 
-### 5. Autonomous Recovery & Agent Decision Timeline
-![Autonomous Recovery Timeline](docs/screenshots/agent_timeline.png)
+### 5. Payment Intelligence
+![Payment Intelligence](docs/screenshots/05_payment_intelligence.png)
+
+### 6. Incident Center
+![Incident Center](docs/screenshots/06_incident_center.png)
+
+### 7. Checkout Recovery & Abandoned Carts
+![Checkout Recovery](docs/screenshots/07_checkout_recovery.png)
+
+### 8. Human Approval Center
+![Human Approval Center](docs/screenshots/08_approval_center.png)
+
+### 9. Live Agentic Checkout Simulation
+![Live Agentic Checkout Simulation](docs/screenshots/09_live_checkout.png)
+
+### 10. Autonomous Recovery & Agent Decision Timeline
+![Autonomous Recovery Timeline](docs/screenshots/10_agent_timeline.png)
+
+### 11. AI Financial Analyst & Stock Chat
+![AI Financial Analyst](docs/screenshots/11_ai_financial_chat.png)
+
+### 12. Revenue & Recovery Analytics
+![Revenue Analytics](docs/screenshots/12_revenue_analytics.png)
+
+### 13. Immutable Audit Log
+![Immutable Audit Log](docs/screenshots/13_audit_log.png)
 
 ---
 
