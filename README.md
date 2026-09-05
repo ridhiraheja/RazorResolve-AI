@@ -2,11 +2,14 @@
 
 > An autonomous AI commerce agent that turns failed checkouts into recovered revenue.
 
+🚀 **Live App**: [https://razor-resolve-ai.vercel.app/](https://razor-resolve-ai.vercel.app/)
+
 ---
 
 ## Demo
 
-[Watch the 5-minute demonstration](VIDEO_LINK_TO_BE_ADDED)
+- **Live Application**: [https://razor-resolve-ai.vercel.app/](https://razor-resolve-ai.vercel.app/)
+- **Video Demo**: [Watch the 5-minute demonstration](VIDEO_LINK_TO_BE_ADDED)
 
 ---
 
@@ -26,6 +29,8 @@ E-commerce merchants lose significant revenue every day due to friction points a
 **RazorResolve AI** is an autonomous commerce intelligence platform that actively observes checkout events, investigates transaction failures in real-time, evaluates strict safety policies, executes automated recovery actions, and maintains an explainable audit trail.
 
 Instead of displaying generic error messages, RazorResolve AI acts as an intelligent intermediary between the customer, merchant, and payment gateway to safely recover lost revenue.
+
+![Dashboard Overview](docs/screenshots/overview.png)
 
 ---
 
@@ -59,7 +64,12 @@ Audit Trail
 
 - **AI Product Discovery**: Natural language query understanding and contextual product discovery.
 - **Semantic Product Search**: Relevance scoring algorithm mapping user search intent (e.g. "earphones", "laptops under ₹70,000") to product catalog items.
+
+![AI Shopping Assistant](docs/screenshots/ai_shopping.png)
+
 - **Dynamic Cart Management**: Slide-over cart drawer with inline quantity increment/decrement controls, item removal, dynamic subtotal calculations, and seamless checkout sync.
+
+![Shopping Cart Drawer](docs/screenshots/cart_drawer.png)
 - **Agentic Checkout**: Interactive simulation environment visualizing real-time payment failure investigation and autonomous recovery across 6 scenario workflows.
 - **Payment Failure Investigation**: Automated diagnostic engine analyzing status codes, error patterns, and failure logs to determine the exact root cause.
 - **Gateway Failure Recovery**: Automatic alternate route re-execution for temporary 503 gateway outages.
@@ -116,6 +126,8 @@ When a customer attempts a transaction that triggers a duplicate charge pattern 
 
 During a **503 Gateway Failure** simulation, the system executes the complete 7-stage decision lifecycle visually in real-time:
 
+![Live Agentic Checkout Simulation](docs/screenshots/live_checkout.png)
+
 ```text
 Gateway Failure
    ↓
@@ -133,6 +145,8 @@ ACT           (Executes recovery transaction via secondary gateway route)
    ↓
 VERIFY        (Confirms payment capture & synchronizes order state)
 ```
+
+![Autonomous Recovery Timeline](docs/screenshots/agent_timeline.png)
 
 This 7-stage lifecycle represents the core demonstration of autonomous agentic governance in RazorResolve AI.
 
@@ -292,7 +306,20 @@ For a complete 5-minute project demonstration, follow this step-by-step sequence
 
 ## Screenshots
 
-Screenshots of the dashboard, agentic checkout, approval workflow, audit trail, and financial analyst are included in the project demonstration.
+### 1. Dashboard Overview
+![Dashboard Overview](docs/screenshots/overview.png)
+
+### 2. AI Shopping Assistant
+![AI Shopping Assistant](docs/screenshots/ai_shopping.png)
+
+### 3. Shopping Cart Drawer
+![Shopping Cart Drawer](docs/screenshots/cart_drawer.png)
+
+### 4. Live Agentic Checkout Simulation
+![Live Agentic Checkout Simulation](docs/screenshots/live_checkout.png)
+
+### 5. Autonomous Recovery & Agent Decision Timeline
+![Autonomous Recovery Timeline](docs/screenshots/agent_timeline.png)
 
 ---
 
