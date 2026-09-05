@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Sidebar from '@/components/layout/Sidebar'
 import Topbar from '@/components/layout/Topbar'
 import Overview from '@/pages/Overview'
@@ -30,8 +30,8 @@ const PAGE_META: Record<string, { title: string; subtitle: string }> = {
 }
 
 function useCurrentMeta() {
-  const path = window.location.pathname
-  return PAGE_META[path] ?? { title: 'RazorResolve AI', subtitle: '' }
+  const location = useLocation()
+  return PAGE_META[location.pathname] ?? { title: 'RazorResolve AI', subtitle: '' }
 }
 
 export default function App() {
