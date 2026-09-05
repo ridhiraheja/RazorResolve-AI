@@ -8,33 +8,50 @@ from typing import List, Dict, Any, Optional, Set
 
 # Keyword & Synonym Map for semantic search intent
 SYNONYM_MAP: Dict[str, List[str]] = {
-    "earphones": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds"],
-    "earbud": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds"],
-    "earbuds": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds"],
+    "earphones": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds", "audio"],
+    "earbud": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds", "audio"],
+    "earbuds": ["earphones", "earphone", "earbuds", "earbud", "airpods", "in-ear", "headphones", "headphone", "tws", "airdopes", "buds", "audio"],
     "headphones": ["headphones", "headphone", "earphones", "earbud", "earbuds", "airpods", "audio", "headset"],
     "laptop": ["laptop", "laptops", "notebook", "macbook", "vivobook", "pavilion", "nitro", "pc", "computer"],
+    "laptops": ["laptop", "laptops", "notebook", "macbook", "vivobook", "pavilion", "nitro", "pc", "computer"],
     "phone": ["phone", "phones", "smartphone", "mobile", "iphone", "galaxy", "android", "oneplus", "redmi"],
+    "phones": ["phone", "phones", "smartphone", "mobile", "iphone", "galaxy", "android", "oneplus", "redmi"],
     "smartphone": ["phone", "phones", "smartphone", "mobile", "iphone", "galaxy", "android", "oneplus", "redmi"],
-    "tv": ["tv", "television", "smart tv", "4k tv", "qled", "led"],
+    "smartphones": ["phone", "phones", "smartphone", "mobile", "iphone", "galaxy", "android", "oneplus", "redmi"],
+    "tv": ["tv", "tvs", "television", "smart tv", "4k tv", "qled", "led"],
+    "tvs": ["tv", "tvs", "television", "smart tv", "4k tv", "qled", "led"],
     "shoes": ["shoes", "shoe", "footwear", "sneaker", "sneakers", "running", "air max", "ultraboost"],
+    "shoe": ["shoes", "shoe", "footwear", "sneaker", "sneakers", "running", "air max", "ultraboost"],
     "gaming": ["gaming", "rtx", "gpu", "gamer", "rog", "nitro"],
-    "camera": ["camera", "photography", "mirrorless", "gopro", "eos"],
+    "camera": ["camera", "cameras", "photography", "mirrorless", "gopro", "eos"],
+    "cameras": ["camera", "cameras", "photography", "mirrorless", "gopro", "eos"],
     "jeans": ["jeans", "denim", "pants", "trousers"],
-    "dress": ["dress", "skirt", "women"],
-    "shirt": ["shirt", "tshirt", "t-shirt", "kurta"],
-    "book": ["book", "books", "novel", "read", "author", "fiction", "habits", "psychology"],
+    "dress": ["dress", "dresses", "skirt", "women", "frock"],
+    "dresses": ["dress", "dresses", "skirt", "women", "frock"],
+    "shirt": ["shirt", "shirts", "tshirt", "t-shirt", "kurta"],
+    "shirts": ["shirt", "shirts", "tshirt", "t-shirt", "kurta"],
+    "book": ["book", "books", "novel", "novels", "read", "reading", "author", "fiction", "habits", "psychology", "self-help", "literature"],
+    "books": ["book", "books", "novel", "novels", "read", "reading", "author", "fiction", "habits", "psychology", "self-help", "literature"],
+    "novel": ["book", "books", "novel", "novels", "read", "reading", "author", "fiction", "literature"],
+    "novels": ["book", "books", "novel", "novels", "read", "reading", "author", "fiction", "literature"],
+    "clothes": ["clothes", "clothing", "fashion", "apparel", "wear", "outfit", "garments", "shirt", "jeans", "dress", "hoodie", "kurta", "attire"],
+    "clothing": ["clothes", "clothing", "fashion", "apparel", "wear", "outfit", "garments", "shirt", "jeans", "dress", "hoodie", "kurta", "attire"],
+    "fashion": ["clothes", "clothing", "fashion", "apparel", "wear", "outfit", "garments", "shirt", "jeans", "dress", "hoodie", "kurta", "shoes", "sneakers"],
+    "apparel": ["clothes", "clothing", "fashion", "apparel", "wear", "outfit", "garments", "shirt", "jeans", "dress", "hoodie", "kurta"],
     "vacuum": ["vacuum", "dyson", "cleaner"],
-    "cooker": ["cooker", "fryer", "kitchen", "stove", "pot"]
+    "cooker": ["cooker", "fryer", "kitchen", "stove", "pot"],
+    "electronics": ["electronics", "electronic", "gadgets", "gadget", "tech", "device", "devices", "laptop", "phone", "tv", "camera", "headphones"],
+    "beauty": ["beauty", "skincare", "makeup", "cosmetics", "lotion", "moisturizer", "cream", "shampoo", "perfume"],
+    "skincare": ["skincare", "beauty", "lotion", "moisturizer", "cream", "shampoo"],
 }
 
 CATEGORY_KEYWORDS = {
-    "electronics": ["phone", "smartphone", "mobile", "laptop", "computer", "tablet", "headphone", "earphone", "earbuds", "tv", "television",
-                    "camera", "keyboard", "mouse", "charger", "speaker", "smart", "gaming", "airpods"],
-    "fashion": ["shirt", "jeans", "dress", "shoe", "sneaker", "hoodie", "kurta", "saree", "jacket", "wear"],
-    "home": ["fan", "cooler", "vacuum", "kitchen", "cookware", "furniture", "shelf", "lamp", "decor", "fryer", "stove"],
-    "sports": ["cricket", "football", "yoga", "badminton", "tennis", "fitness", "gym", "running", "cycle", "mat"],
-    "books": ["book", "novel", "read", "author", "fiction", "non-fiction", "self-help", "finance", "habits"],
-    "beauty": ["skincare", "makeup", "perfume", "lotion", "shampoo", "moisturizer", "cream"],
+    "electronics": ["electronics", "electronic", "gadget", "gadgets", "tech", "phone", "phones", "smartphone", "smartphones", "mobile", "laptop", "laptops", "computer", "tablet", "headphone", "headphones", "earphone", "earphones", "earbuds", "tv", "tvs", "television", "camera", "cameras", "keyboard", "mouse", "charger", "speaker", "smart", "gaming", "airpods"],
+    "fashion": ["fashion", "clothes", "clothing", "apparel", "wear", "outfit", "outfits", "garments", "attire", "shirt", "shirts", "jeans", "dress", "dresses", "shoe", "shoes", "sneaker", "sneakers", "hoodie", "kurta", "saree", "jacket"],
+    "home": ["home", "household", "appliances", "appliance", "fan", "cooler", "vacuum", "kitchen", "cookware", "furniture", "shelf", "lamp", "decor", "fryer", "stove"],
+    "sports": ["sports", "sport", "fitness", "gym", "workout", "cricket", "football", "yoga", "badminton", "tennis", "running", "cycle", "mat"],
+    "books": ["book", "books", "novel", "novels", "read", "reading", "author", "fiction", "non-fiction", "self-help", "finance", "habits", "literature"],
+    "beauty": ["beauty", "skincare", "makeup", "perfume", "lotion", "shampoo", "moisturizer", "cream", "cosmetics"],
 }
 
 PRICE_PATTERNS = [
@@ -48,13 +65,29 @@ PRICE_PATTERNS = [
 ]
 
 
+def stem_word(w: str) -> str:
+    """Basic English word stemmer to unify singular/plural forms."""
+    w = w.lower()
+    if len(w) > 4 and w.endswith("ies"):
+        return w[:-3] + "y"
+    if len(w) > 3 and w.endswith("es"):
+        return w[:-2]
+    if len(w) > 3 and w.endswith("s") and not w.endswith("ss"):
+        return w[:-1]
+    return w
+
+
 def expand_query_keywords(query: str) -> Set[str]:
-    """Expand query terms into a clean set of word-level synonyms."""
+    """Expand query terms into a clean set of word-level synonyms & stemmed variants."""
     words = set(re.findall(r'\b\w+\b', query.lower()))
     expanded = set(words)
-    for w in words:
+    for w in list(words):
+        stemmed = stem_word(w)
+        expanded.add(stemmed)
         if w in SYNONYM_MAP:
             expanded.update(SYNONYM_MAP[w])
+        if stemmed in SYNONYM_MAP:
+            expanded.update(SYNONYM_MAP[stemmed])
     return expanded
 
 
@@ -101,8 +134,8 @@ def parse_query_intent(query: str) -> Dict[str, Any]:
 
 def score_product_for_query(product: Dict[str, Any], intent: Dict[str, Any]) -> float:
     """
-    Score a product's TRUE semantic relevance using exact word boundary regex.
-    Text relevance dominates category & ratings. Returns 0.0–1.0.
+    Score a product's semantic relevance using exact word matching, expanded terms,
+    and category relevance. Returns 0.0–1.0.
     """
     name_val = product.get("name")
     name_lower = str(name_val).lower() if name_val is not None else ""
@@ -118,42 +151,61 @@ def score_product_for_query(product: Dict[str, Any], intent: Dict[str, Any]) -> 
 
     price = product.get("price") or 0
     cat_val = product.get("category") or ""
-    cat = cat_val.value if hasattr(cat_val, "value") else str(cat_val)
+    cat = cat_val.value if hasattr(cat_val, "value") else str(cat_val).lower()
 
     expanded_terms = intent.get("expanded_terms", [])
     raw_keywords = intent.get("keywords", [])
+    detected_cats = intent.get("categories", [])
 
     text_score = 0.0
+    item_matched = False
 
-    # 1. Direct Word-Boundary Match in Name / Brand (Highest Weight)
+    # 1. Direct Word-Boundary Match in Name / Brand / Tags (Highest Specificity)
     for kw in raw_keywords:
         if len(kw) > 2:
             pat = r'\b' + re.escape(kw) + r'\b'
-            if re.search(pat, name_lower):
+            stem_pat = r'\b' + re.escape(stem_word(kw))
+            if re.search(pat, name_lower) or re.search(stem_pat, name_lower):
                 text_score += 0.50
+                item_matched = True
             elif re.search(pat, brand_lower):
-                text_score += 0.15
+                text_score += 0.20
+            elif any(re.search(pat, t) or re.search(stem_pat, t) for t in tags):
+                text_score += 0.40
+                item_matched = True
 
     # 2. Expanded Synonym Matches in Name, Tags, or Description
     for term in expanded_terms:
         if len(term) > 2:
             pat = r'\b' + re.escape(term) + r'\b'
             if re.search(pat, name_lower):
-                text_score += 0.30
+                text_score += 0.35
+                item_matched = True
             elif any(re.search(pat, t) for t in tags):
                 text_score += 0.25
+                item_matched = True
             elif re.search(pat, desc_lower):
-                text_score += 0.10
+                text_score += 0.15
 
-    # Cap raw text relevance score
-    text_score = min(0.88, text_score)
+    # 3. Category Match (Base Category Score)
+    category_match = False
+    if cat in detected_cats:
+        category_match = True
+    else:
+        for term in expanded_terms:
+            if term == cat or stem_word(term) == stem_word(cat):
+                category_match = True
+                break
 
-    # CRITICAL: If there is ZERO text relevance to the query, score stays 0.0!
+    if category_match:
+        text_score += 0.45 if item_matched else 0.40
+
+    # If there is no category match and no text/tag relevance, return 0.0
     if text_score == 0.0:
         return 0.0
 
-    # 3. Category Boost ONLY if text matched
-    category_boost = 0.05 if cat in intent.get("categories", []) else 0.0
+    # Cap raw score before modifiers
+    text_score = min(0.88, text_score)
 
     # 4. Price Constraint Adjustment
     price_score = 0.0
@@ -181,7 +233,7 @@ def score_product_for_query(product: Dict[str, Any], intent: Dict[str, Any]) -> 
     # 6. Customer Rating as a Minor Tie-Breaker (Max 0.048)
     rating_tiebreaker = (product.get("rating", 4.0) / 100.0)
 
-    final_score = text_score + category_boost + price_score + modifier_score + rating_tiebreaker
+    final_score = text_score + price_score + modifier_score + rating_tiebreaker
     return round(min(0.98, max(0.0, final_score)), 3)
 
 
